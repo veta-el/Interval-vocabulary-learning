@@ -4,9 +4,13 @@ Interval vocabulary learning
 This project is aimed at automating an interval approach to learning anything (for example, vocabulary in different languages or answers to questions). The main difference from the card-based approach is the possibility of using an infinite number of combinations (that is, not only pairs of values, but also triples/fours and so on). For example, it is convenient for learning the vocabulary of the Chinese language, since in addition to repeating the hieroglyph-translation pairs, you can add pinyin. The code uses the term 'word' to denote values, but it can be any combination of strings.
 
 A .csv file is used as the data source, which must be filled in for your task (template in file_template.csv). Columns:
+
 original_index - the number in order (index) for each combination
+
 first_column, second_column, third_column <...> - rename them to suit your task (for example, 'word' and 'translation'). There are must be at least two columns with data, and as unlimited as possible (during combinations repetitions, the source column will be randomly selected from the specified ones, for the rest it is necessary to enter the corresponding value - this is how this program works)
+
 status - when initially filling in, specify 1
+
 updated - the date when the combination was added in the DD.MM.YYYY format.
 
 When starting from the command line, specify the full path to the file .csv with data, a list of column names to repeat (separated by a space) and a limit of words/values to repeat (0 - if you need to repeat everything, or limit the number of combinations to repeat). When repeating, information is provided about how many combinations are left to repeat, which are correct or incorrect, and statistics at the end on the number of correct and incorrect answers.
